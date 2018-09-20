@@ -3,9 +3,13 @@ package controller;
 public class IfProjectRunner
 {
 
-	public IfProjectRunner()
-	{
-		// TODO Auto-generated constructor stub
-	}
+	
+	
+		public static void main(String[]args)
+		{
+			IfProjectController app = new IfProjectController();
+			app.start(); 
+		}
+	
 
 }
