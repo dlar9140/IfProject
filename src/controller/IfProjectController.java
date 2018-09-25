@@ -26,7 +26,7 @@ public class IfProjectController
 			
 		}
 		{
-			loopy();
+			askUser();
 		}
 		
 		private void loopy()
@@ -40,35 +40,45 @@ public class IfProjectController
 				JOptionPane.showMessageDialog(null, "brother may I have some loops?" );
 				//Eventually change the loop variable
 				count++;
-				if (count >= 10)
-				{
-					isDone = true;	//update variable
-				}
+			
 				
 			}
-		}
-
-		{
-			myLoop();
-		}
-
-	private void myLoop()
-	{
-		boolean isFinished = false;
-		int count = 0;
-				
-		while (isFinished)
-		{
-			JOptionPane.showMessageDialog(null, "Hello, I am the second looper." );
-			count++;
-			if (count >= 5)
+			
+			for (int loop = 0; loop < 30; loop += 2)
 			{
-				isFinished = true;
+				JOptionPane.showMessageDialog(null,  "The loop value is: " + loop);
 			}
 		}
-	}
+		
+		private void askUser()
+		{
+			String response = JOptionPane.showInputDialog(null, "What is the distance?");
+			Run userRun = new Run();
+			
+			while (!validDouble(response))
+			{
+				response = JOptionPane.showInputDialog(null, "No! Type in a valid number for the distance.");
+			}
+			userRun.setDistance(Double.parseDouble(response));
+			
+		}
+
+public boolean validDouble(String maybeDouble)
+{
+	boolean isValid = false;
 	
+	try
+	{
+		Double.parseDouble(maybeDouble);
+		isValid = true;
 	}
+	catch(NumberFormatException error)
+	{
+		JOptionPane.showMessageDialog(null,  "This requires a double value aka something with a . >)");
+	}
+	return isValid;
+	}
+}
 
 	
 		

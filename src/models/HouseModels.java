@@ -39,6 +39,7 @@ public class HouseModels
 		return name;
 	}
 	
+}
 	
 	
 
