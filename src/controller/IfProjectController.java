@@ -3,7 +3,7 @@ package controller;
 //Import Section
 import models.HouseModels;
 
-importjavax.swing.JOptionPane //import for pop up windows
+import javax.swing.JOptionPane; //import for pop up windows
 
 public class IfProjectController
 {
@@ -25,8 +25,51 @@ public class IfProjectController
 			System.out.println("Let's build a house for you! What color is it?");
 			
 		}
-}
+		{
+			loopy();
+		}
+		
+		private void loopy()
+		{
+			//Define variable before loop
+			boolean isDone = false;
+			int count = 0;
+			
+			while (!isDone)//Test the variable
+			{
+				JOptionPane.showMessageDialog(null, "brother may I have some loops?" );
+				//Eventually change the loop variable
+				count++;
+				if (count >= 10)
+				{
+					isDone = true;	//update variable
+				}
+				
+			}
+		}
+
+		{
+			myLoop();
+		}
+
+	private void myLoop()
+	{
+		boolean isFinished = false;
+		int count = 0;
+				
+		while (isFinished)
+		{
+			JOptionPane.showMessageDialog(null, "Hello, I am the second looper." );
+			count++;
+			if (count >= 5)
+			{
+				isFinished = true;
+			}
+		}
+	}
 	
+	}
+
 	
 		
 	
