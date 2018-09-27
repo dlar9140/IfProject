@@ -39,7 +39,51 @@ public class HouseModels
 		return name;
 	}
 	
+	public double getmaterial()
+	{
+		return material;
+	}
+	
+	public int getamountMaterial()
+	{
+		return amountMaterial;
+	}
+
+	public int getamountRooms()
+	{
+		return amountRooms;
+	}
+	
+	public void setName(String name)
+	{
+		this.name = name;
+	}
+	
+	public void setmaterial(double material)
+	{
+		this.material = material;
+	}
+	
+	public void setamountMaterial(int amountMaterial)
+	{
+		this.amountMaterial = amountMaterial;
+	}
+	
+	public void setamountRooms( int amountRooms)
+	{
+		this.amountRooms = amountRooms;
+	}
+	
+	public String toString()
+	{
+		String description = "My house's name is" + name + "it is made out of" + material + "and has" + amountMaterial + "of them. It also has" + amountRooms + "to.";
+		
+		return description = "";
+	}
+	
 }
+	
+
 	
 	
 
