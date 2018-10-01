@@ -24,20 +24,20 @@ public class IfProjectController
 
 		public void start()
 		{
-			JOptionPane.showMessageDialog(null, "Let's build a house for you! What is it's name?");
+			JOptionPane.showInputDialog(null, "Let's build a house for you! What is it's name?");
 			Scanner inputScanner = new Scanner(System.in);
 			String name = inputScanner.nextLine();
 			JOptionPane.showMessageDialog(null, "Your house is named" + name); 
 			
-			JOptionPane.showMessageDialog(null, "What material is" + name + "made out of?"); 
+			JOptionPane.showInputDialog(null, "What material is" + name + "made out of?"); 
 			String material = inputScanner.nextLine();
 			JOptionPane.showMessageDialog(null, name + "is made out of" + material); 
 			
-			JOptionPane.showMessageDialog(null, "How many units of" + material + "are a part of your house?");
+			JOptionPane.showInputDialog(null, "How many units of" + material + "are a part of your house?");
 			String amountMaterial = inputScanner.nextLine();
 			JOptionPane.showMessageDialog(null, "Your house has" + amountMaterial + "in it");
 			
-			JOptionPane.showMessageDialog(null, "How many rooms does" + name + "have?");
+			JOptionPane.showInputDialog(null, "How many rooms does" + name + "have?");
 			String amountRooms = inputScanner.nextLine();
 			JOptionPane.showMessageDialog(null, "Your house has" + amountRooms + "rooms.");
 		}
@@ -80,9 +80,16 @@ public class IfProjectController
 				response = JOptionPane.showInputDialog(null, "No! Type in a valid number for the price.");
 			}
 			//assign and convert
-			userRun.setDistance(Double.parseDouble(response));
+			userRun.setDistance(Double.parseDouble(response)); 
 			
-			JOptionPane.showMessageDialog(null,  userRun);
+			response = JOptionPane.showInputDialog(null, "what is the name of the run?");
+			if (response.equalsIgnoreCase("CTEC"))
+			{
+				JOptionPane.showInputDialog(null, "Did you really press cancel, the x, or type nothing? :(");
+			}
+			
+			
+			JOptionPane.showMessageDialog(null, userRun);
 			
 		}
 

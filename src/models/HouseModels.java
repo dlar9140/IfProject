@@ -76,7 +76,10 @@ public class HouseModels
 	
 	public String toString()
 	{
-		String description = "My house's name is" + name + "it is made out of" + material + "and has" + amountMaterial + "of them. It also has" + amountRooms + "to.";
+		String description = "This is a house!";
+		description += " It's called " + name;
+		description += " it is made out of" + material + " and has" + amountMaterial + "of them.";
+		description += " and it also has" + amountRooms + "rooms.";
 		
 		return description = "";
 	}
