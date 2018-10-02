@@ -40,7 +40,16 @@ public class IfProjectController
 			JOptionPane.showInputDialog(null, "How many rooms does" + name + "have?");
 			String amountRooms = inputScanner.nextLine();
 			JOptionPane.showMessageDialog(null, "Your house has" + amountRooms + "rooms.");
-		}
+			
+			String hasWindows =	JOptionPane.showInputDialog(null, "Does your house have any windows?");
+			if(hasWindows.equals("yes") {
+				JOptionPane.showInputDialog(null, "How many windows does your house have?");
+				String hasWindows = inputScanner.nextLine();
+				JOptionPane.showMessageDialog(null, "Your house has" + hasWindows + "windows.");
+			}else(hasWindows.equals("no")) {
+				JOptionPane.showMessageDialog(null, "Your house doesn't have any windows.");
+			}
+		}		
 		{
 			askUser();
 		}

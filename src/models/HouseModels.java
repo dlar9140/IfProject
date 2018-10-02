@@ -19,6 +19,7 @@ public class HouseModels
 	private double material;
 	private int amountMaterial;
 	private int amountRooms;
+	private boolean hasWindows;
 	/**
 	 * Default constructor for after the fact customization
 	 * AKA I don't know the info yet about the Run.
@@ -31,6 +32,7 @@ public class HouseModels
 		this.name = name;
 		this.amountMaterial = amountMaterial;
 		this.amountRooms = amountRooms;
+		this.hasWindows = hasWindows;
 		
 	}
 	
@@ -54,6 +56,11 @@ public class HouseModels
 		return amountRooms;
 	}
 	
+	public boolean hasWindows()
+	{
+		return hasWindows;
+	}
+	
 	public void setName(String name)
 	{
 		this.name = name;
@@ -72,6 +79,11 @@ public class HouseModels
 	public void setamountRooms( int amountRooms)
 	{
 		this.amountRooms = amountRooms;
+	}
+	
+	public void setHasWindows(boolean hasWindows)
+	{
+		this.hasWindows = hasWindows;
 	}
 	
 	public String toString()
