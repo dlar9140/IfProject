@@ -2,10 +2,9 @@ package controller;
 
 //Import Section
 import models.HouseModels;
-
 import java.util.Scanner;
-
 import javax.swing.JOptionPane; //import for pop up windows
+import java.util.Arraylist;
 
 public class IfProjectController
 {
@@ -76,6 +75,42 @@ public class IfProjectController
 			}
 		}
 		
+		private void lotsofRun()
+		{
+			
+		}
+		{
+			//Local variable are only visible in the method they are defined in!
+			//They only have SCOPE to that method
+			
+			ArrayList<Run> myRuns = new ArrayList<Run>();
+			
+			Run sampleRun = new Run();
+			Run otherRun = newRun();
+			
+			myRuns.add(sampleRun);
+			myRuns.add(sampleRun);
+			myRuns.add(otherRun);
+			
+			//Standard forward loop
+			for (int index = myRuns.size() / 2; index < myRuns.size(); index += 1)
+			{
+				
+			}
+			
+			//Standard backward loop
+			for (int index = myRuns.size() - 1; index >= 0; index -=1)
+			{
+				
+			}
+			
+			for (Run current : myRuns)
+			{
+				JOptionPane.showMessageDialog(null, "The run is named: " + current.getName());
+			}
+			
+		}
+		
 		private void askUser()
 		{
 			IfProjectRunner userRun = new IfProjectRunner();
@@ -89,7 +124,7 @@ public class IfProjectController
 				response = JOptionPane.showInputDialog(null, "No! Type in a valid number for the price.");
 			}
 			//assign and convert
-			userRun.setDistance(Double.parseDouble(response)); 
+			userRun.setPrice(Double.parseDouble(response)); 
 			
 			response = JOptionPane.showInputDialog(null, "what is the name of the run?");
 			if (response.equalsIgnoreCase("CTEC"))
