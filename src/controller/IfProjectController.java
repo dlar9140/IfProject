@@ -4,7 +4,8 @@ package controller;
 import models.HouseModels;
 import java.util.Scanner;
 import javax.swing.JOptionPane; //import for pop up windows
-import java.util.Arraylist;
+import java.util.ArrayList;
+import java.util.Iterator;
 
 public class IfProjectController
 {
@@ -85,20 +86,31 @@ public class IfProjectController
 			
 			ArrayList<Run> myRuns = new ArrayList<Run>();
 			
+			ArrayList<Integer> myNums = new ArrayList<Integer>();
+			//Have to use a Wrapper class to hold a primitive in a list
+			
 			Run sampleRun = new Run();
-			Run otherRun = newRun();
+			Run otherRun = new Run();
 			
 			myRuns.add(sampleRun);
 			myRuns.add(sampleRun);
 			myRuns.add(otherRun);
 			
 			//Standard forward loop
+			//if used to remove you have to change index -= 1
 			for (int index = myRuns.size() / 2; index < myRuns.size(); index += 1)
 			{
+				//Good for display, or minor changes
+				JOptionPane.showMessageDialog(null, myRuns.get(index).getName());
 				
+				//Good for remove, replace, change multiple values
+				Run currentRun = myRuns.get(index);
+				currentRun.setName("The new name is " + index + " run");
+				currentRun.setDistance(index * (int) (Math.random() * 300));
 			}
 			
 			//Standard backward loop
+			//great for removing!!!
 			for (int index = myRuns.size() - 1; index >= 0; index -=1)
 			{
 				
@@ -109,6 +121,32 @@ public class IfProjectController
 				JOptionPane.showMessageDialog(null, "The run is named: " + current.getName());
 			}
 			
+		}
+		
+		public void whileLoops()
+		{
+			ArrayList randomObjects = new ArrayList();
+			
+			randomObjects.add("pencil");
+			randomObjects.add("pen");
+			randomObjects.add("eraser");
+			randomObjects.add(5);
+			
+			Iterator it = randomObjects.iterator();
+			
+			while (it.hasNext())
+			{
+				JOptionPane.showMessageDialog(null, it.next());
+				
+			}
+			
+			//Remove an item from the list
+			randomObjects.remove("pen");
+			
+			//print out the new list
+				JOptionPane.showMessageDialog(null, "Whole list=" + randomObjects);
+				
+			//Get the item at index position 1
 		}
 		
 		private void askUser()
