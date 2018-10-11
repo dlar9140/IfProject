@@ -125,14 +125,25 @@ public class IfProjectController
 		
 		public void whileLoops()
 		{
+			/*
+			 * In the ArrayList, it has 3 different objects. The number in front shows part of the array or the 
+			 * order it's in.
+			 */
 			ArrayList randomObjects = new ArrayList();
 			
 			randomObjects.add("pencil");
 			randomObjects.add("pen");
 			randomObjects.add("eraser");
 			randomObjects.add(5);
+			/*
+			 * Iterator is what counts or labels the objects on each part of the list
+			 */
 			
 			Iterator it = randomObjects.iterator();
+			/*
+			 * I used this while loop to keep executing the process to count on the list
+			 * until there's nothing left.
+			 */
 			
 			while (it.hasNext())
 			{
